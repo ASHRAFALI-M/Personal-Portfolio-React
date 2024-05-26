@@ -1,0 +1,70 @@
+
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 30;
+    backdrop-filter: blur(50px);
+}
+
+.navbar-brand-custom {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-right: 30px;
+  padding-left: 20px;
+}
+
+.navbar-brand-custom span {
+  color:teal;
+  font-size: 1.5rem;
+}
+
+.navbar-item {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500 ;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar-item:hover{
+  font-size: 1rem;
+}
+
+.navbar-item-active {
+    animation: glowingEffect 1s infinite alternate; 
+  }
+  
+  @keyframes glowingEffect {
+    from {
+      text-shadow: 0 0 10px rgba(127, 101, 231, 0.502), 0 0 20px rgba(127, 101, 231, 0.5), 0 0 30px rgba(127, 101, 231, 0.5);
+    }
+    to {
+      text-shadow: 0 0 10px #7f65e7, 0 0 20px rgba(127, 101, 231, 1), 0 0 30px rgba(127, 101, 231, 1);
+    }
+  }
+
+.navbar-icon {
+  font-size: 1.2rem;
+  margin-right: 10px; 
+}
+
+.navbar-icon:hover{
+  font-size: 1.5rem;
+  color:teal;
+}
+
+.navbar-btn.btn-primary {
+  background-color: transparent;
+  border: 1px solid teal;
+  color: teal !important;
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 0px 10px teal;
+}
+
+.navbar-btn.btn-primary:hover,
+.navbar-btn.btn-primary.navbar-item-active {
+  background-color:   #844ce669;
+  box-shadow: 0 0 20px  #945BF5 !important;
+  color: #fff !important;
+}

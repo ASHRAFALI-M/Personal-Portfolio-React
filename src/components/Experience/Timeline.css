@@ -1,0 +1,36 @@
+.timeline-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the start */
+  margin-bottom: 20px;
+  height: 90%; /* Allow the item to take the full height */
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid teal; /* Teal color outline */
+  background-color: transparent;
+  border-radius: 50%;
+  margin-left: 130px;
+  margin-right: -7px;
+  box-shadow: 0 0 19px teal; /* Add glowing effect with teal color */
+}
+
+.timeline-dot.filled {
+  background-color: teal; /* Fill dot with teal color */
+  border: none;
+}
+
+.timeline-content {
+  width: 2px;
+  height: 100%;
+  background-color: teal; /* Teal color for timeline content */
+  margin-top: 20px;
+  box-shadow: 0 0 19px teal; /* Add glowing effect with teal color */
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    display: none;
+  }
+}
