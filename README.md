@@ -25,27 +25,6 @@ This is my personal portfolio website built using React with Vite and styled wit
 - Bootstrap: A popular CSS framework for developing responsive and mobile-first websites.
 - FontAwesome: A library of scalable vector icons that can be customized with CSS.
 
-## Getting Started
-
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/shafa-shabudeen/Personal-Portfolio-React.git
-
-2. Navigate to the project directory:
-   ```bash
-   cd personal-portfolio
-
-3. Install dependencies:
-   ```bash
-   npm install
-
-4. Run the development server:
-   ```bash
-   npm run dev
-
-5. Open your browser and visit http://localhost:3000 to view the website.
-
 ## Live Website
   Visit the live website: <a href='https://ashrafali-m.github.io/Personal-Portfolio-React/'>Personal Portfolio</a>
 "# Personal-Portfolio-React" 
