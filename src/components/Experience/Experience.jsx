@@ -21,6 +21,19 @@ const experiences = [
     ],
   },
   {
+    role: "Data Science Intern",
+    company: "Unified mentor private limited",
+    img: "uni.jpeg",
+    date: "05/2024",
+    endDate: "07/2024",
+    skills: ["Data Science","Ml Algorithms","Data Preprocessing","Data Visualization"],
+    description: [
+      "In my 2-month virtual data science internship at Unified Mentor Pvt., I tackled real-world challenges by creating innovative predictive models and uncovering deep data insights.",
+      " I harnessed cutting-edge technologies and collaborated on transformative projects, driving impactful data-driven solutions. ",
+      " This internship significantly boosted my expertise in machine learning, data visualization, and advanced analytics."
+    ],
+  },
+  {
     role: "Machine Learning Intern",
     company: "Sync Interns",
     img: "sync.png",
@@ -30,7 +43,7 @@ const experiences = [
     description: [
       "During my virtual machine learning internship, I gained hands-on experience applying algorithms to real-world datasets.",
       " I developed predictive models, optimized them for performance, and learned to interpret results for practical applications.",
-      "Through collaborative projects and mentorship, I honed my skills in data preprocessing, model selection, and evaluation techniques, contributing to my growth as a budding data scientist."
+      " Through collaborative projects and mentorship, I honed my skills in data preprocessing, model selection, and evaluation techniques, contributing to my growth as a budding data scientist."
     ],
   }
 ];
