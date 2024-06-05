@@ -22,7 +22,7 @@ const experiences = [
   },
   {
     role: "Data Science Intern",
-    company: "Unified mentor private limited",
+    company: "Unified Mentor private limited",
     img: "uni.jpeg",
     date: "05/2024",
     endDate: "07/2024",
