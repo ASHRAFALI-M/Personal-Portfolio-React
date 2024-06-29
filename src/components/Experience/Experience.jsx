@@ -10,7 +10,7 @@ const experiences = [
   {
     role: "AI Researcher Intern",
     company: "Trio Devs",
-    img: "trio.jpeg",
+    img: "trio.jpg",
     date: "05/2024",
     endDate: "",
     skills: ["Artificial Intelligence","Research","Communication","Team Work"],
