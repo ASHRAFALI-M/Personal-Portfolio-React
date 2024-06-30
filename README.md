@@ -26,5 +26,4 @@ This is my personal portfolio website built using React with Vite and styled wit
 - FontAwesome: A library of scalable vector icons that can be customized with CSS.
 
 ## Live Website
-  Visit the live website: <a href='https://ashrafali-m.github.io/Personal-Portfolio-React/'>Personal Portfolio</a>
-"# Personal-Portfolio-React" 
+  Visit the live website: <a href='https://ashrafali-m.github.io/Personal-Portfolio-React/'>Personal Portfolio</a> "# Personal-Portfolio-React" 
