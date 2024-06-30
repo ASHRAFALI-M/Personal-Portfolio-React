@@ -24,7 +24,7 @@ const experiences = [
     role: "Data Science Intern",
     company: "Unified Mentor private limited",
     img: "uni.jpeg",
-    date: "05/2024",
+    date: "05/2024 to 07/2024",
     endDate: "07/2024",
     skills: ["Data Science","Ml Algorithms","Data Preprocessing","Data Visualization"],
     description: [
@@ -37,7 +37,7 @@ const experiences = [
     role: "Machine Learning Intern",
     company: "Sync Interns",
     img: "sync.png",
-    date: "07/2023",
+    date: "07/2023 to 08/2023",
     endDate: "08/2023",
     skills: ["Ml Algorithms","Data Preprocessing"],
     description: [
