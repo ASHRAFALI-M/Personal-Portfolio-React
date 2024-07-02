@@ -2,7 +2,8 @@
   font-size: 42px;
   text-align: center;
   font-weight: 600;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: #fff;
 }
 
@@ -29,5 +30,5 @@
 }
 
 .blog-link:hover {
-  background-color: teal;
+  background-color: darkslategray; /* Slightly darker teal on hover */
 }
