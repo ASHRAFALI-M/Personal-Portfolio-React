@@ -23,6 +23,7 @@ function App(){
     <Skills />
     <Experience />
     <Projects />
+    <Blogs />
     <ControlledExample />
     <Footer />
    
