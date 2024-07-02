@@ -8,8 +8,8 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer/Footer";
 import Blogs from "./components/Blogs/Blogs";
+import Footer from "./components/Footer/Footer";
 // import Certifications from "./components/Certifications/Certifications";
 import ControlledExample from "./components/Certifications/Certifications";
 
