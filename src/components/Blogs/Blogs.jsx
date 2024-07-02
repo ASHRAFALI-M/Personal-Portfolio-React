@@ -7,7 +7,7 @@ const Blogs = () => {
   return (
     <section className="blogs-section">
       <h2>Blogs</h2>
-      <p>Check out my latest blog posts:</p>
+      <p>Check out my latest blog posts</p>
       <a 
         href="https://medium.com/@ashrafali31018" 
         target="_blank" 
