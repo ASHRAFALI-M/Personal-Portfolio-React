@@ -6,7 +6,7 @@ import { useState } from "react";
 const Blogs = () => {
   return (
     <section className="blogs-section">
-      <h2>BLOGS</h2>
+      <h2>Blogs</h2>
       <p>Check out my latest blog posts:</p>
       <a 
         href="https://medium.com/@ashrafali31018" 
