@@ -1,4 +1,5 @@
 import React from 'react';
+import './Certifications.css';
 
 const Blogs = () => {
   return (
