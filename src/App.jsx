@@ -9,6 +9,7 @@ import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
+import Footer from "./components/Blogs/Blogs";
 // import Certifications from "./components/Certifications/Certifications";
 import ControlledExample from "./components/Certifications/Certifications";
 
