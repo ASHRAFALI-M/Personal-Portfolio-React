@@ -60,6 +60,11 @@ function About() {
               >
                 <FontAwesomeIcon icon={faMedium} />
               </a>
+               <a href="https://www.kaggle.com/ashrafsmart" className="blog-link" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                 <kaggle />
+               </a>
               <a id="SocialMediaIcon" href="mailto:ashrafali31018@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
