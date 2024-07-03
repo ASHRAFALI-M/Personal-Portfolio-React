@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
-import KaggleIcon from '../KaggleIcon';
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 function About() {
@@ -60,14 +59,6 @@ function About() {
               >
                 <FontAwesomeIcon icon={faMedium} />
               </a>
-               <a 
-                 href="https://www.kaggle.com/ashrafsmart" 
-                 className="blog-link" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-               >
-                 <KaggleIcon />
-               </a>
               <a id="SocialMediaIcon" href="mailto:ashrafali31018@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
