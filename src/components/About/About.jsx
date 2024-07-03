@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
-import KaggleIcon from './kaggle';
+import kaggle from './kaggle';
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 function About() {
