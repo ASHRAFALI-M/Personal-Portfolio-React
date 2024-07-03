@@ -3,7 +3,7 @@ import "./About.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 function About() {
@@ -51,6 +51,13 @@ function About() {
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <a
+                id="SocialMediaIcon"
+                href="https://medium.com/@ashrafali31018"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faMedium} />
               </a>
               <a id="SocialMediaIcon" href="mailto:ashrafali31018@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} />
