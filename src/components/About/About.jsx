@@ -16,7 +16,7 @@ function About() {
               Hi, I am <br /> Ashrafali...
             </div>
             <div id="textLoop">
-              I am a{" "}
+              I am a/an{" "}
               <span>
                 <Typewriter
                   options={{
