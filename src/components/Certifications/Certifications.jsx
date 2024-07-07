@@ -5,6 +5,11 @@ import './Certifications.css';
 function Certifications() {
   const certificateData = [
     {
+      title: "Certificate Azure900",
+      description: "Certificate Azure900",
+      image: "Certificate_Azure900.jpg",
+    },
+    {
       title: "Data Science and Analytics",
       description: "Hp Life",
       image: "DS_HpLife.jpg",
