@@ -9,6 +9,16 @@ function Certifications() {
       description: "Certificate Azure900",
       image: "Certificate_Azure900.jpg",
     },
+     {
+      title: "certificate databricks",
+      description: "certificate databricks",
+      image: "certificate databricks.jpg",
+    },
+    {
+      title: "Infosys-LLM",
+      description: "Infosys-LLM",
+      image: "Infosys-LLM.jpg",
+    },
     {
       title: "Data Science and Analytics",
       description: "Hp Life",
