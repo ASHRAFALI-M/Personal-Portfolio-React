@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Blogs = () => {
   return (
-    <section className="blogs-section">
+    <section className="blogs-section" id="blogs">
       <h2>Blogs</h2>
       <p>Check out my latest blog posts</p>
       <a 
