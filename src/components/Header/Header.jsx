@@ -30,9 +30,7 @@ function Header() {
           <Navbar.Collapse id="navbarNav">
             <Nav className="navbar-nav me-auto mb-2 mb-lg-0">
               <Nav.Item className={`navbar-item ${activeLink === 'about' ? 'navbar-item-active' : ''}`}>
-              <Nav.Link href="#about" onClick={() => handleNavLinkClick('about')}>
-                About
-              </Nav.Link>
+              <Nav.Link href="#about" onClick={() => handleNavLinkClick('about')}> About</Nav.Link>
             </Nav.Item>
               <Nav.Item className={`navbar-item ${activeLink === 'skills' ? 'navbar-item-active' : ''}`}>
                 <Nav.Link href="#skills" onClick={() => handleNavLinkClick('skills')}> Skills</Nav.Link>
