@@ -8,7 +8,20 @@ import { faCircleDot } from "@fortawesome/free-regular-svg-icons";
 
 const experiences = [
   {
-    role: "AI Researcher Intern",
+  role: "Machine Learning Intern",
+  company: "NIT Trichy",
+  img: "nitt.jpg",
+  date: "09/2024 to 03/2025",
+  endDate: "",
+  skills: ["Machine Learning", "Deep Learning", "Computer Vision", "Python", "Research"],
+  description: [
+    "Working on a research project titled 'Skin Cancer Detection Using CNN' at NIT Trichy.",
+    "Designing and training convolutional neural network models for accurate skin lesion classification.",
+    "Utilizing datasets such as ISIC 2020 to perform data preprocessing, model evaluation, and performance optimization."
+  ],
+},
+  {
+    role: "AI Developer Intern",
     company: "Trio Devs",
     img: "trio.jpg",
     date: "05/2024 to 08/2024",
@@ -112,3 +125,4 @@ function Experience() {
 }
 
 export default Experience;
+
