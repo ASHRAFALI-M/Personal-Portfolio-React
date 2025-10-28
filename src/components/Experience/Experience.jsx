@@ -10,7 +10,7 @@ const experiences = [
   {
   role: "Machine Learning Intern",
   company: "NIT Trichy",
-  img: "nitt.jpg",
+  img: "nit logo.png",
   date: "09/2024 to 03/2025",
   endDate: "",
   skills: ["Machine Learning", "Deep Learning", "Computer Vision", "Python", "Research"],
@@ -125,4 +125,5 @@ function Experience() {
 }
 
 export default Experience;
+
 
