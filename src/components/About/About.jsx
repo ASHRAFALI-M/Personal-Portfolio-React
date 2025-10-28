@@ -25,7 +25,7 @@ function About() {
                       "Data Analyst",
                       "ML Engineer",
                       "AI Engineer"
-                      "AI Researcher,
+                      "AI Researcher",
                     ],
                     autoStart: true,
                     loop: true,
@@ -77,4 +77,5 @@ function About() {
 }
 
 export default About;
+
 
