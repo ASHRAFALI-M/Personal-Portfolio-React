@@ -67,7 +67,7 @@ function About() {
           </Col>
           <Col md={5} className="d-flex justify-content-md-end order-1 order-md-2 mt-md-0 mt-3">
             <div id="heroContainer">
-              <img src="./profile.jpg" alt="hero image" id="img" />
+              <img src="./ASHRAFALI_IMG.jpg" alt="hero image" id="img" />
             </div>
           </Col>
         </Row>
@@ -77,6 +77,7 @@ function About() {
 }
 
 export default About;
+
 
 
 
