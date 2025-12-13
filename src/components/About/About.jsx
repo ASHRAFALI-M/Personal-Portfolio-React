@@ -22,9 +22,9 @@ function About() {
                   options={{
                     strings: [
                       "Data Scientist",
-                      "Data Analyst",
+                      "AI Developer",
                       "ML Engineer",
-                      "AI Engineer",
+                      "AI Full Stack Developer",
                       "AI Researcher"
                     ],
                     autoStart: true,
@@ -77,6 +77,7 @@ function About() {
 }
 
 export default About;
+
 
 
 
