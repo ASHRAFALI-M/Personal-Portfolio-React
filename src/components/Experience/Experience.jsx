@@ -8,6 +8,21 @@ import { faCircleDot } from "@fortawesome/free-regular-svg-icons";
 
 const experiences = [
   {
+  role: "AI Developer",
+  company: "ASK Real Estate",
+  img: "Ask_Logo.webp",
+  date: "11/2025 to Present",
+  endDate: "",
+  skills: ["Agentic AI", "LLMs", "RAG","Backend Development", "Node.js", "TypeScript", "AI Systems"],
+  description: [
+    "Working on building AI-driven features to support real estate operations and internal workflows.",
+    "Developing agent-based AI systems for handling property queries, document understanding, and information retrieval.",
+    "Building chat-based assistants connected to property listings and internal documents.",
+    "Implementing document search and question-answering using embeddings and vector-based retrieval.",
+    "Developing and maintaining backend AI services using Node.js and TypeScript."
+  ],
+},
+  {
   role: "Machine Learning Intern",
   company: "NIT Trichy",
   img: "nit logo.png",
@@ -125,5 +140,6 @@ function Experience() {
 }
 
 export default Experience;
+
 
 
