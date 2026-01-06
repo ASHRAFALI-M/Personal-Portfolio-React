@@ -29,7 +29,7 @@ function Footer() {
           </a>
         </div>
         <div id="Copyright">
-          &copy; 2025 Ashrafali. All rights reserved.
+          &copy; 2026 Ashrafali. All rights reserved.
         </div>
       </div>
     </div>
@@ -37,3 +37,4 @@ function Footer() {
 }
 
 export default Footer;
+
