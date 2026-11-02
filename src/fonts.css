@@ -1,0 +1,21 @@
+/* Self-hosted, latin subset, fetched once from the Google Fonts CDN and served
+   from our own origin: no render-blocking third-party stylesheet, no DNS/TLS
+   handshake to fonts.gstatic.com, and no visitor request leaves for Google.
+
+   Google returns ONE VARIABLE file per family covering the whole weight range,
+   so requesting 4 weights of JetBrains Mono fetched the same 30kB file four
+   times over. One @font-face with a weight range is correct and much smaller.
+
+   Inter lives in case-studies/case-study.css instead, it is used only inside
+   the lazy-loaded case studies, so the landing page must not pay 48kB for a
+   face it never renders.
+
+   JetBrains Mono is SIL Open Font License 1.1. */
+
+@font-face{
+  font-family:'JetBrains Mono';
+  font-style:normal;
+  font-weight:100 800;        /* variable axis range */
+  font-display:swap;
+  src:url('./fonts/jetbrains-mono.woff2') format('woff2');
+}
