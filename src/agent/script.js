@@ -223,6 +223,9 @@ export function findDomain(code) {
   return DOMAINS.find((d) => d.code === code) || null
 }
 
+/* BASE_URL, not "/": the site is served from a project subpath on GitHub Pages. */
+export const CV_URL = `${import.meta.env.BASE_URL}Ashrafali-M-CV.pdf`
+
 export const SECTIONS = [
   { id: 'work', label: 'Work', hint: '5 records' },
   { id: 'practice', label: 'Practice & method', hint: '4 disciplines' },

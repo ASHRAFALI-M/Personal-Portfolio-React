@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { CV_URL } from '../agent/script.js'
 
 const EMAIL = import.meta.env.VITE_CONTACT_EMAIL || 'ashrafali31018@gmail.com'
 // digits only, country code first: what wa.me expects
@@ -52,6 +53,9 @@ export default function Contact({ clock }) {
             </span>
             <span>
               <a href="https://github.com/ASHRAFALI-M" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </span>
+            <span>
+              <a href={CV_URL} target="_blank" rel="noopener noreferrer">CV ↓</a>
             </span>
             <span>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>

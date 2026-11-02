@@ -325,18 +325,49 @@ body::before{
   font:inherit; font-size:10.5px; color:var(--faint);
   border:1px solid var(--line2); border-radius:3px; padding:1px 5px;
 }
+/* Menu button: sibling of .top-theme, only exists where the inline nav is gone */
+.top-menu{
+  flex:none; display:none; place-items:center;
+  width:30px; height:28px; color:var(--faint);
+  border:1px solid var(--line2); border-radius:var(--r);
+  transition:color .18s ease,border-color .18s ease;
+}
+.top-menu:hover,.top-menu.on{color:var(--acid-ink); border-color:color-mix(in srgb,var(--acid-ink) 45%,transparent)}
+.top-menu path{fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; transform-origin:8px 8px; transition:transform .18s ease,opacity .18s ease}
+/* three bars become an X: outer two meet in the middle and cross, the middle fades */
+.top-menu.on path:nth-child(1){transform:translateY(3.5px) rotate(45deg)}
+.top-menu.on path:nth-child(2){opacity:0}
+.top-menu.on path:nth-child(3){transform:translateY(-3.5px) rotate(-45deg)}
+/* Dropdown: #top's surface, hangs off its bottom edge. Hidden (not display:none) so it can fade */
+.top-panel{
+  display:none; position:absolute; left:0; right:0; top:100%;
+  background:var(--bg); /* solid: a nested backdrop-filter does not blur inside #top's, so translucent let the hero bleed through */
+  border-bottom:1px solid var(--line);
+  opacity:0; transform:translateY(-6px); visibility:hidden; pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .18s;
+}
+.top-panel.open{opacity:1; transform:none; visibility:visible; pointer-events:auto; transition:opacity .18s ease,transform .18s ease}
+.top-panel a,.top-panel button{
+  display:flex; align-items:center; gap:14px; width:100%; min-height:52px;
+  padding:0 var(--gut); border-left:2px solid transparent; text-align:left;
+  color:var(--text); font-size:15px;
+}
+.top-panel a+a,.top-panel button{border-top:1px solid var(--line)}
+.top-panel i{font-style:normal; font-size:11px; letter-spacing:.08em; color:var(--faint); flex:none; width:2ch}
+.top-panel span{flex:1; min-width:0}
+.top-panel em{font-style:normal; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); flex:none}
+.top-panel a:hover,.top-panel button:hover{background:var(--raised)}
+.top-panel a.cur{border-left-color:var(--acid-ink)}
+.top-panel a.cur span{color:var(--acid-ink)}
+.top-panel .tp-theme{display:none}
+@media(max-width:400px){.top-panel .tp-theme{display:flex}}
+@media(max-width:960px){.top-panel{display:block}}
+@media(prefers-reduced-motion:reduce){.top-panel,.top-panel.open,.top-menu path{transition:none}}
 /* 960 not 820: the single-row bar (dots, title, 6 links, theme, ask) needs ~950px, so it wrapped past the viewport from 821 */
 @media(max-width:960px){
   .top-title s{display:none}
-  /* Nav drops to a 2nd, horizontally scrolling row. #top prefix beats the later (pointer:coarse) height:54px */
-  #top .top-in{flex-wrap:wrap; height:auto; row-gap:0; padding-top:5px; padding-bottom:0}
-  .top-nav{
-    order:10; flex:1 0 100%; position:relative; margin:5px calc(-1 * var(--gut)) 0; padding:0 var(--gut);
-    overflow-x:auto; overscroll-behavior-x:contain; scrollbar-width:none;
-    border-top:1px solid var(--line); gap:0;
-  }
-  .top-nav::-webkit-scrollbar{display:none}
-  .top-nav a{flex:none; display:flex; align-items:center; min-height:40px; padding:0 12px}
+  .top-nav{display:none}
+  .top-menu{display:grid}
 }
 
 /* ==========================================================================
@@ -545,6 +576,9 @@ body::before{
   font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint);
 }
 .fact.live b{color:var(--acid-ink)}
+/* reuses the Work cards' .go button; it just sits under the stats strip */
+.go.cv{margin-top:18px}
+.go.cv a:hover i{transform:translateY(3px)}   /* the arrow points down, so it nudges down */
 /* phones: 2×2, so four facts never leave one orphaned on its own row;
    below 480px they stack (see TOUCH & COMPACT) */
 @media(max-width:560px){.facts{display:grid; grid-template-columns:1fr 1fr}}
@@ -1009,12 +1043,31 @@ footer{
 .f-brand span{color:var(--acid-ink)}
 .f-who p{margin:10px 0 14px; max-width:38ch; font-size:12.5px; line-height:1.6; color:var(--dim)}
 .f-mail{font-size:12.5px; color:var(--text); border-bottom:1px solid var(--line2); padding-bottom:2px; transition:color .18s ease, border-color .18s ease}
-.f-mail:hover{color:var(--acid-ink); border-color:var(--acid-ink)}
+.f-mail:hover,.f-mail:is(:active,:focus-visible){color:var(--acid-ink); border-color:var(--acid-ink)}
 .f-col{display:flex; flex-direction:column; gap:9px}
 .f-col b{font-weight:400; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); margin-bottom:3px}
-.f-col a{font-size:12.5px; color:var(--dim); transition:color .18s ease; width:fit-content}
-.f-col a s{text-decoration:none; color:var(--faint); margin-right:10px; font-size:10.5px}
-.f-col a:hover{color:var(--acid-ink)}
+/* Links slide right, an underline rises into place and the arrow lifts off.
+   The underline is a text-decoration so it hugs the text inside the 44px touch rows */
+.f-col a,.f-top{
+  width:fit-content; -webkit-tap-highlight-color:transparent;
+  text-decoration-line:underline; text-decoration-thickness:1px; text-decoration-color:transparent; text-underline-offset:8px;
+  transition:color .18s ease,transform .25s cubic-bezier(.2,.7,.2,1),text-decoration-color .18s ease,text-underline-offset .25s ease;
+}
+.f-col a{font-size:12.5px; color:var(--dim)}
+.f-col a s{display:inline-block; text-decoration:none; color:var(--faint); margin-right:10px; font-size:10.5px; transition:color .18s ease} /* inline-block keeps the underline off the number */
+.f-col a span,.f-top span{display:inline-block; transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+/* :hover only with a mouse: on touch it sticks after the tap. Fingers get :active instead, faster so a quick tap still shows */
+@media(hover:hover){
+  .f-col a:hover,.f-top:hover{color:var(--acid-ink); transform:translateX(4px); text-decoration-color:color-mix(in srgb,var(--acid-ink) 55%,transparent); text-underline-offset:4px}
+  .f-col a:hover s{color:var(--acid-ink)}
+  .f-col a:hover span{transform:translate(2px,-2px)}
+  .f-top:hover span{transform:translateY(-3px)}
+}
+.f-col a:is(:active,:focus-visible),.f-top:is(:active,:focus-visible){color:var(--acid-ink); transform:translateX(4px); text-decoration-color:color-mix(in srgb,var(--acid-ink) 55%,transparent); text-underline-offset:4px; transition-duration:.08s}
+.f-col a:is(:active,:focus-visible) s{color:var(--acid-ink)}
+.f-col a:is(:active,:focus-visible) span{transform:translate(2px,-2px); transition-duration:.08s}
+.f-top:is(:active,:focus-visible) span{transform:translateY(-3px); transition-duration:.08s}
+@media(prefers-reduced-motion:reduce){.f-col a,.f-top,.f-col a span,.f-top span{transition:color .18s ease}}
 
 /* status line */
 .f-bar{
@@ -1023,8 +1076,7 @@ footer{
   font-size:11px; letter-spacing:.06em; color:var(--faint);
 }
 .f-bar b{font-weight:500; color:var(--text)}
-.f-top{margin-left:auto; color:var(--dim); transition:color .18s ease}
-.f-top:hover{color:var(--acid-ink)}
+.f-top{margin-left:auto; color:var(--dim)}
 
 @media(max-width:760px){
   .f-grid{grid-template-columns:1fr 1fr}
@@ -1101,12 +1153,12 @@ html{scroll-behavior:smooth}
    Keyed on width OR a coarse pointer, so a touch tablet in landscape gets the
    same hit areas as a phone.
    ========================================================================== */
-/* Two-row header (54 + 41 + 1px border = 96px) at <=960: clear it. Sits after the base 62px rules so it wins */
-@media(max-width:960px){.panel,.console,.rec{scroll-margin-top:106px}}
 @media(max-width:820px),(pointer:coarse){
+  /* header is 54px + 1px border here (46 elsewhere): clear it. Sits after the base 62px rules so it wins */
+  .panel,.console,.rec{scroll-margin-top:64px}
   .top-in{height:54px}
   .top-k{min-height:44px; padding:0 14px}
-  .top-theme{width:44px; height:44px}
+  .top-theme,.top-menu{width:44px; height:44px}
 
   /* 16px input text: iOS zooms the page on focus below that */
   .p-row{padding:6px 8px 6px 14px; gap:8px}
@@ -1129,7 +1181,8 @@ html{scroll-behavior:smooth}
   .hail .copy{min-height:44px}
   .f-ask{min-height:44px}
   .f-col{gap:0}
-  .f-col a{display:flex; align-items:center; min-height:44px}
+  /* block + line-height, not flex: a flex item would carry the hover underline under the arrow too */
+  .f-col a{display:block; line-height:44px}
   .pal-item{min-height:44px}
 
   /* links that sit in a line of text: grow the hit area, not the layout */
@@ -1181,7 +1234,7 @@ html{scroll-behavior:smooth}
   /* screen-only furniture */
   #boot,#top,#pal,.console,.skip,.mesh,
   .shot .scan,.shot .rail,.p-head .lead,
-  .hail .mail span,.hail .copy,.f-end,nav.f-col,.f-top{display:none !important}
+  .hail .mail span,.hail .copy,.f-end,nav.f-col,.f-top,.go.cv{display:none !important}
 
   /* everything reveals, the IntersectionObserver never runs for print */
   .rv{opacity:1 !important; transform:none !important}

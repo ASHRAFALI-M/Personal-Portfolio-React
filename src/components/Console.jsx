@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { INTENTS, SUGGESTED, AGENT, SECTIONS } from '../agent/script.js'
+import { INTENTS, SUGGESTED, AGENT, SECTIONS, CV_URL } from '../agent/script.js'
 import Stream, { parse } from '../agent/Stream.jsx'
 import AgentGraph from '../agent/AgentGraph.jsx'
 import portrait from '../assets/portrait.jpg'
@@ -98,6 +98,10 @@ export default function Console({ agent, onGo, onPalette, clock }) {
               <div className="fact"><b>9</b><span>tool-using agents</span></div>
               <div className="fact"><b>14</b><span>signal classifiers</span></div>
               <div className="fact"><b>23</b><span>gated paths</span></div>
+            </div>
+
+            <div className="go cv">
+              <a className="primary" href={CV_URL} target="_blank" rel="noopener noreferrer">download cv <i aria-hidden="true">↓</i></a>
             </div>
           </div>
 

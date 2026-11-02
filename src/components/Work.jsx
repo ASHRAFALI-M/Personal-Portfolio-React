@@ -31,7 +31,7 @@ const PROJECTS = [
     slug: 'automations',
     group: 'production',
     title: 'ERP AI Automations',
-    state: '72 features',
+    state: 'live',
     description:
       'Seventy-two AI features I built into the ERP across facility management, CRM, procurement, property management, HR and DealRooms: 15 signal radars that read what staff write, on-demand investigators, drafters that write the chase for a person to send, document readers, and automations that raise work orders from failed inspections. The model explains and drafts; code computes, checks and decides.',
     technologies: ['TypeScript', 'Node.js', 'Anthropic Claude', 'LangGraph', 'PostgreSQL', 'Redis'],

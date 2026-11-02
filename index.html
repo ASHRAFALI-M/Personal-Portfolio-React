@@ -24,12 +24,13 @@
 <meta name="theme-color" content="#07080A">
 <meta name="color-scheme" content="dark light">
 <!-- Runs before the stylesheet so the chosen theme is on <html> at first
-     paint. Without this, a light-theme visitor sees a black flash on load. -->
+     paint. Without this, a light-theme visitor sees a black flash on load.
+     Dark is the default regardless of the OS setting; light only if picked. -->
 <script>
 (function(){
   try{
     var saved = localStorage.getItem('theme')
-    var t = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+    var t = saved === 'light' ? 'light' : 'dark'
     document.documentElement.setAttribute('data-theme', t)
     if (t === 'light') document.querySelector('meta[name="theme-color"]').setAttribute('content','#F5F5F2')
   }catch(e){ document.documentElement.setAttribute('data-theme','dark') }

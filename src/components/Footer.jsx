@@ -47,7 +47,7 @@ export default function Footer({ clock, onPalette }) {
         <div className="f-bar">
           <span>© {new Date().getFullYear()} Ashrafali M. All rights reserved.</span>
           <span>Manama <b>{clock}</b> AST</span>
-          <a href="#hero" className="f-top">↑ top</a>
+          <a href="#hero" className="f-top"><span aria-hidden="true">↑</span> top</a>
         </div>
       </div>
     </footer>
