@@ -1,0 +1,6 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://ashrafali-m.github.io/Personal-Portfolio-React/sitemap.xml
